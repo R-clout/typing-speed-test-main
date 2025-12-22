@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="./src/output.css" rel="stylesheet">
+  <title>Frontend Mentor | Typing Speed Test</title>
+</head>
+
+<body class="p-2 font-Sora bg-neutral900 flex flex-col gap-5">
+  <header class="flex  justify-between items-center">
+    <img src="./assets/images/logo-small.svg" alt="typing-icon" />
+    <div id="high-score-section" class="flex items-center gap-2">
+      <img src="./assets/images/icon-personal-best.svg" />
+      <p class="text-neutral500">Best: <span class="text-neutral0">92 WPM</span></p>
+    </div>
+  </header>
+  <main class="flex flex-col gap-4">
+    <div class="flex justify-around">
+      <div class="flex flex-col">
+        <p class="text-neutral500">WPM:</p>
+        <p class="text-neutral0 font-bold text-center text-[1.2rem]">0</p>
+      </div>
+      <div class="">
+        <p class="text-neutral500">Accuracy</p>
+        <p class="text-neutral0 font-bold text-center text-[1.2rem]">100%</p>
+      </div>
+      <div>
+        <p class="text-neutral500">Time:</p>
+        <p class="text-neutral0 font-bold text-center text-[1.2rem]">0:60</p>
+      </div>
+    </div>
+    <div class="flex justify-around gap-3 w-full">
+      <div class="flex text-neutral0 relative rounded-lg justify-center gap-2 items-center border w-[50%]">
+        <p>Hard</p>
+        <img src="./assets/images/icon-down-arrow.svg" />
+        <div class="hidden absolute top-7.5 rounded-lg w-full p-2 flex flex-col gap-2 bg-neutral800">
+          <div class="flex items-center gap-2">
+            <input class="accent-blue400" type="radio" id="easy" name="difficulty" value="easy" />
+            <label for="easy">Easy</label>
+          </div>
+          <div class="flex items-center gap-2">
+            <input type="radio" id="medium" name="difficulty" value="medium" />
+            <label for="medium">Medium</label>
+          </div>
+          <div class="flex items-center gap-2">
+            <input checked type="radio" id="hard" name="difficulty" value="hard" />
+            <label for="hard">Hard</label>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative flex w-[50%] rounded-lg justify-center text-neutral0 gap-2 items-center border-neutral0 border">
+        <p>Timed(60s)</p>
+        <img src="./assets/images/icon-down-arrow.svg" />
+        <div class="hidden absolute top-7.5 rounded-lg w-full p-2 flex flex-col gap-2 bg-neutral800">
+          <div class="flex items-center gap-2">
+            <input type="radio" id="timed" name="timeOptions" value="timed" checked />
+            <label for="timed">Timed(60s)</label>
+          </div>
+          <div class="flex items-center gap-2">
+            <input type="radio" id="passage" name="timeOptions" value="passage" />
+            <label for="passage">Passage</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
